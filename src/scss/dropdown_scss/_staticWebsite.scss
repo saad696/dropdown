@@ -1,0 +1,130 @@
+@import "../variables";
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@700&family=PT+Serif&display=swap");
+
+@mixin underline {
+  position: relative;
+  left: 40%;
+  width: 20%;
+  border-top: 4px solid #d11b03;
+  background-color: #d11b03;
+}
+
+.header-section {
+  .overlay-img {
+    // position: absolute;
+    // width: 100%;
+    // height: 250px;
+    // top: 138px;
+    // left: 0;
+    // background-color: rgba(0, 0, 0, 0.5);
+    // z-index: 100;
+  }
+
+  .section-bg {
+    width: 100%;
+    height: 250px;
+    background: #333333; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #333333,
+      #dd1818
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333333, #dd1818);
+  }
+  .section-title {
+    background: -webkit-linear-gradient(#c6ffdd , #fbd786 , #f7797d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 200;
+    margin: 5.5rem 0;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+      margin: 7rem 0;
+    }
+
+  }
+
+  .breadcrumb{
+    background-color: rgba(0,0,0,.3);
+    display: inline-block;
+    font-weight: bold;
+    margin: 5rem 0;
+    padding-bottom: 0;
+    font-family: $font1;
+  }
+}
+
+.content-section{
+  background-color: #f5f5f5;
+  padding: 2rem;
+
+  .content-box {
+    font-family: $font1;
+
+    &_content-heading {
+      color: #303030;
+    }
+    &_content-para {
+      color: #303030;
+    }
+  }
+}
+#webpage-svg {
+  margin-left: 100px;
+  margin-top: -270px;
+}
+
+.underline {
+  @include underline();
+}
+
+.card {
+  transition: all 0.8s ease;
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.5);
+  }
+
+  &_heading,
+  &_para {
+    font-family: $font1;
+  }
+}
+
+.provide {
+  &_heading {
+    font-family: $font1;
+  }
+}
+
+.features-bg {
+  background-color: $color-primary-light;
+}
+
+.features {
+  &_heading {
+    font-family: $font1;
+    color: #fff;
+  }
+}
+
+.benifits {
+  &_content {
+    @media screen and (min-width: 700px) {
+      margin-top: 70px;
+    }
+  }
+
+  &_img {
+    @media screen and (max-width: 400px) {
+      margin-top: 50px;
+    }
+  }
+
+  &_heading {
+    font-family: $font1;
+  }
+}
